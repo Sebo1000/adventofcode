@@ -2,4 +2,4 @@
 
 ## Solutions
 
-
+* Day  1 - ⭐️⭐
