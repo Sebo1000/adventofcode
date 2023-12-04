@@ -1,7 +1,7 @@
 package com.seb.common;
 
-import com.seb.common.grid.Point;
 import com.google.common.collect.AbstractIterator;
+import com.seb.common.grid.Point;
 import lombok.RequiredArgsConstructor;
 
 import java.util.AbstractCollection;
@@ -52,6 +52,6 @@ public class Line extends AbstractCollection<Point> implements Collection<Point>
     }
 
     private int greatestCommonDivisor(int a, int b) {
-        return b == 0 ? a : greatestCommonDivisor(b, a%b);
+        return b == 0 ? a : greatestCommonDivisor(b, a % b);
     }
 }
