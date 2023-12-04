@@ -22,4 +22,8 @@ public class Day04Test extends TestCase {
         Assert.assertEquals("23847", cut.solvePart1(input));
     }
 
+    public void testSolvePart2() {
+        Assert.assertEquals("8570000", cut.solvePart2(input));
+    }
+
 }

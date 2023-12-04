@@ -4,7 +4,6 @@ import com.seb.core.AbstractPuzzle;
 import com.seb.core.PuzzlePart;
 import com.seb.core.PuzzleRunner;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.NotImplementedException;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,8 +16,7 @@ public class Day04 extends AbstractPuzzle {
         PuzzleRunner.run(new Day04());
     }
 
-    private String[] lines;
-    private List<Card> cards = new ArrayList<>();
+    private final List<Card> cards = new ArrayList<>();
 
     @Override
     public boolean isSample() {
@@ -27,12 +25,12 @@ public class Day04 extends AbstractPuzzle {
 
     @Override
     public PuzzlePart runPart() {
-        return PuzzlePart.SECOND_PART;
+        return PuzzlePart.ALL;
     }
 
     @Override
     public void commonPart(String rawInput) {
-        lines = splitInputLines(rawInput);
+        String[] lines = splitInputLines(rawInput);
         for (String line : lines) {
             Card card = new Card();
             String[] split = line.split(": ");
@@ -45,7 +43,7 @@ public class Day04 extends AbstractPuzzle {
             card.numbers.addAll(Arrays.stream(numbers).filter(r -> !r.isBlank()).map(Integer::valueOf).toList());
             cards.add(card);
         }
-        log.warn("nbCard {}", cards.size());
+        log.info("nbCard {}", cards.size());
     }
 
     @Override
@@ -65,8 +63,27 @@ public class Day04 extends AbstractPuzzle {
 
     @Override
     public String solvePart2(String rawInput) {
-        throw new NotImplementedException("Solve me !");
+        List<Card> newCards = new ArrayList<>();
+
+        for (Card card : cards) {
+            int nbWinningNumbers = 0;
+            for (Integer n : card.numbers) {
+                if (card.winningNumbers.contains(n)) {
+                    nbWinningNumbers++;
+                }
+            }
+            card.nbWinningNumbers = nbWinningNumbers;
+        }
+
+        cards.forEach(c -> processCard(c, cards, newCards));
+        return String.valueOf(newCards.size());
     }
 
-}
+    void processCard(Card card, List<Card> cards, List<Card> newCards) {
+        newCards.add(card);
 
+        for (int i = card.id; i < card.nbWinningNumbers + card.id; i++) {
+            processCard(cards.get(i), cards, newCards);
+        }
+    }
+}

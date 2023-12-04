@@ -9,5 +9,6 @@ public class Card {
     Integer id;
     List<Integer> winningNumbers = new ArrayList<>();
     List<Integer> numbers = new ArrayList<>();
+    Integer nbWinningNumbers;
 
 }
