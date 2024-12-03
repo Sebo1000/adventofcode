@@ -1,10 +1,10 @@
-package com.seb.puzzle.day03;
+package com.seb.puzzle.aoc2023.day03;
 
 import com.seb.common.grid.Grid;
 import com.seb.core.AbstractPuzzle;
 import com.seb.core.PuzzlePart;
 import com.seb.core.PuzzleRunner;
-import com.seb.puzzle.day03.model.Symbol;
+import com.seb.puzzle.aoc2023.day03.model.Symbol;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.NotImplementedException;
 

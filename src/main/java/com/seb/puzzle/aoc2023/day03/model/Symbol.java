@@ -1,4 +1,4 @@
-package com.seb.puzzle.day03.model;
+package com.seb.puzzle.aoc2023.day03.model;
 
 import com.seb.common.grid.Point;
 
