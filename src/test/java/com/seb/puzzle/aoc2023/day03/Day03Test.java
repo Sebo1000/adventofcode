@@ -1,11 +1,12 @@
-package com.seb.puzzle.day01;
+package com.seb.puzzle.aoc2023.day03;
 
 import com.seb.core.Puzzle;
 import com.seb.input.InputReader;
+import com.seb.puzzle.aoc2023.day03.Day03;
 import junit.framework.TestCase;
 import org.junit.Assert;
 
-public class Day01Test extends TestCase {
+public class Day03Test extends TestCase {
 
     private static final InputReader inputReader = new InputReader();
     private Puzzle cut;
@@ -13,16 +14,13 @@ public class Day01Test extends TestCase {
 
     @Override
     public void setUp() {
-        cut = new Day01();
+        cut = new Day03();
         input = inputReader.read(cut.inputFileName());
         cut.commonPart(input);
     }
 
     public void testSolvePart1() {
-        Assert.assertEquals("54940", cut.solvePart1(input));
+        Assert.assertEquals("507214", cut.solvePart1(input));
     }
 
-    public void testSolvePart2() {
-        Assert.assertEquals("54208", cut.solvePart2(input));
-    }
 }

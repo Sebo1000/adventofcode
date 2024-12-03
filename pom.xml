@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.seb</groupId>
-    <artifactId>adventofcode-2023</artifactId>
+    <artifactId>adventofcode</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>adventofcode-2023</name>
-    <description>Solution for advent of code 2023</description>
+    <name>adventofcode</name>
+    <description>Solution for advent of code</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

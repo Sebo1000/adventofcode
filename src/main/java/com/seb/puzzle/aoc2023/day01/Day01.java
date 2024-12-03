@@ -1,4 +1,4 @@
-package com.seb.puzzle.day01;
+package com.seb.puzzle.aoc2023.day01;
 
 import com.seb.core.AbstractPuzzle;
 import com.seb.core.PuzzlePart;

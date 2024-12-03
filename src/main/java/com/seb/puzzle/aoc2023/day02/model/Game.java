@@ -1,4 +1,4 @@
-package com.seb.puzzle.day02.model;
+package com.seb.puzzle.aoc2023.day02.model;
 
 public class Game {
 

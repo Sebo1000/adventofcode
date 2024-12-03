@@ -18,9 +18,11 @@ public interface Puzzle {
     String solvePart2(String rawInput);
 
     default String inputFileName() {
+        String[] packagesParts = getClass().getPackageName().split("\\.");
+        final String day = packagesParts[3] + "/" + packagesParts[4];
         if (isSample()) {
-            return getClass().getSimpleName().toLowerCase() + "/" + "sample.txt";
+            return day + "/sample.txt";
         }
-        return getClass().getSimpleName().toLowerCase() + "/" + "input.txt";
+        return day + "/input.txt";
     }
 }

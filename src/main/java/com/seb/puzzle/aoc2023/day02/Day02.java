@@ -1,8 +1,8 @@
-package com.seb.puzzle.day02;
+package com.seb.puzzle.aoc2023.day02;
 
 import com.seb.core.AbstractPuzzle;
 import com.seb.core.PuzzleRunner;
-import com.seb.puzzle.day02.model.Game;
+import com.seb.puzzle.aoc2023.day02.model.Game;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;
