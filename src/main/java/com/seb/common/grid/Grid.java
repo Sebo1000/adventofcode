@@ -75,7 +75,7 @@ public class Grid<T extends Point> extends AbstractCollection<T> implements Coll
         return Arrays.stream(candidates).filter(Optional::isPresent).map(Optional::get).collect(Collectors.toList());
     }
 
-    private boolean isOutOfTheGrid(int x, int y) {
+    public boolean isOutOfTheGrid(int x, int y) {
         return y < 0 || y >= grid.length || x < 0 || x >= grid[y].length;
     }
 
@@ -99,8 +99,20 @@ public class Grid<T extends Point> extends AbstractCollection<T> implements Coll
         };
     }
 
-    @SuppressWarnings("unchecked")
-    private T cast(Point point) {
-        return (T) point;
+    @Override
+    public String toString() {
+        String out = "\r\n";
+        for (int x = 0; x < columns(); x++) {
+            for (int y = 0; y < rows(); y++) {
+                out += pointAt(y,x).get().toString();
+            }
+            out += "\r\n";
+        }
+        return out;
     }
-}
+
+        @SuppressWarnings("unchecked")
+        private T cast (Point point){
+            return (T) point;
+        }
+    }

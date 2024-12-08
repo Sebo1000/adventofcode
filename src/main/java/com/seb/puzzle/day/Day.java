@@ -3,8 +3,10 @@ package com.seb.puzzle.day;
 import com.seb.core.AbstractPuzzle;
 import com.seb.core.PuzzlePart;
 import com.seb.core.PuzzleRunner;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.NotImplementedException;
 
+@Slf4j
 public class Day extends AbstractPuzzle {
 
     private String[] lines;
