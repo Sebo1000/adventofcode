@@ -2,7 +2,6 @@ package com.seb.puzzle.aoc2024.day01;
 
 import com.seb.core.Puzzle;
 import com.seb.input.InputReader;
-import com.seb.puzzle.aoc2023.day01.Day01;
 import junit.framework.TestCase;
 import org.junit.Assert;
 
@@ -20,10 +19,10 @@ public class Day01Test extends TestCase {
     }
 
     public void testSolvePart1() {
-        Assert.assertEquals("54940", cut.solvePart1(input));
+        Assert.assertEquals("1189304", cut.solvePart1(input));
     }
 
     public void testSolvePart2() {
-        Assert.assertEquals("54208", cut.solvePart2(input));
+        Assert.assertEquals("24349736", cut.solvePart2(input));
     }
 }
